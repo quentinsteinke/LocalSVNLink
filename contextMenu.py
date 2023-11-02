@@ -26,7 +26,7 @@ if not svn_root:
 relative_path = os.path.relpath(selected_file, svn_root)
 
 # Create the custom link
-link = f"mysvn://open?path={relative_path}"
+link = f"sls://open?path={relative_path}"
 
 # Copy the link to clipboard
 pyperclip.copy(link)
