@@ -1,9 +1,10 @@
 import os
 import sys
 import json
+import subprocess
 
 # Load and parse the settings JSON file
-with open('path_to_svn_settings.json', 'r') as f:
+with open('svn_settings.json', 'r') as f:
     settings = json.load(f)
     possible_roots = settings['repo_roots']
 
@@ -25,5 +26,7 @@ if not svn_root:
 # Combine SVN root with relative path
 full_path = os.path.join(svn_root, relative_path)
 
+full_path = full_path.replace('/', '\\')
+
 # Open the asset with the default application
-os.startfile(full_path)
+subprocess.run(['explorer', '/select,', full_path])

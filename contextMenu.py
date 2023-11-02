@@ -19,7 +19,7 @@ for root in possible_roots:
         break
 
 if not svn_root:
-    print("Selected file is not in any known SVN repo root!")
+    print(f"Selected file is not in any known SVN repo root: {selected_file}")
     sys.exit(1)
 
 # Determine the relative path
