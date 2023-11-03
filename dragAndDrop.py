@@ -14,7 +14,7 @@ def on_drop(event):
 
 def handle_link():
     link = link_entry.get()
-    if link.startswith("mysvn://"):
+    if link.startswith("lsl://"):
         # Handle the link
         subprocess.run([sys.executable, LINK_HANDLER_SCRIPT_PATH, link])
 

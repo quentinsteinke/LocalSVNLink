@@ -4,7 +4,7 @@ import json
 import subprocess
 
 # Load and parse the settings JSON file
-with open('svn_settings.json', 'r') as f:
+with open('D:\Quentin\Documents\projects\LocalSVNLink\svn_settings.json', 'r') as f:
     settings = json.load(f)
     possible_roots = settings['repo_roots']
 
